@@ -32,7 +32,7 @@ function App() {
 
   return (
     <>
-      <Navbar searchData={topAlbums} />
+      <Navbar searchData={[...topAlbums, ...newAlbums]} />
 
       <Hero />
 

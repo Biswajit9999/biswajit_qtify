@@ -12,7 +12,7 @@ function Navbar({ searchData = [] }) {
       </Link>
 
       <Search
-        placeholder="Search an album of your choice"
+        placeholder="Search an song of your choice"
         searchData={searchData}
       />
 

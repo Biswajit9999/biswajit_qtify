@@ -12,7 +12,7 @@ function Section({
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <section className={styles.section}>
+    <div className={styles.section}>
       <div className={styles.header}>
         <h2>{title}</h2>
 
@@ -42,7 +42,7 @@ function Section({
       ) : (
         <Carousel data={data} type={type} />
       )}
-    </section>
+    </div>
   );
 }
 

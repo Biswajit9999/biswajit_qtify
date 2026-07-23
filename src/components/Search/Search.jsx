@@ -55,6 +55,7 @@ function Search({ searchData, placeholder }) {
   const onSubmit = (e, value) => {
     e.preventDefault();
     console.log(value);
+    if (!value) return;
     navigate(`/album/${value.slug}`);
     //Process form data, call API, set state etc.
   };
