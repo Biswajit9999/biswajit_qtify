@@ -6,47 +6,41 @@ import styles from "./Section.module.css";
 function Section({
   title,
   data = [],
-  carousel = false,
   type = "album",
+  showToggle = true,
 }) {
   const [showAll, setShowAll] = useState(false);
-
-  const displayData = showAll ? data : data.slice(0, 7);
 
   return (
     <section className={styles.section}>
       <div className={styles.header}>
         <h2>{title}</h2>
 
-        {!carousel && (
+        {showToggle && (
           <button
-            type="button"
             className={styles.toggle}
-            onClick={() => setShowAll((prev) => !prev)}
+            onClick={() => setShowAll(!showAll)}
           >
             {showAll ? "Collapse" : "Show All"}
           </button>
         )}
       </div>
 
-      {carousel ? (
-        <Carousel
-          data={data}
-          type={type}
-        />
-      ) : (
+      {showAll ? (
         <div className={styles.grid}>
-          {displayData.map((album) => (
+          {data.map((item) => (
             <Card
-              key={album.id}
-              image={album.image}
-              title={album.title}
-              follows={album.follows}
-              likes={album.likes}
+              key={item.id}
+              image={item.image}
+              title={item.title}
+              follows={item.follows}
+              likes={item.likes}
               type={type}
             />
           ))}
         </div>
+      ) : (
+        <Carousel data={data} type={type} />
       )}
     </section>
   );

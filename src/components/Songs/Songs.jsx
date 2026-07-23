@@ -2,7 +2,7 @@ import { useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
-import Carousel from "../Carousel/Carousel";
+import Section from "../Section/Section";
 import styles from "./Songs.module.css";
 
 function Songs({ songs = [], genres = [] }) {
@@ -18,9 +18,7 @@ function Songs({ songs = [], genres = [] }) {
       : songs.filter((song) => song.genre.key === selectedGenre);
 
   return (
-    <section className={styles.section}>
-      <h2 className={styles.heading}>Songs</h2>
-
+    <div className={styles.section}>
       <Tabs
         value={selectedGenre}
         onChange={handleChange}
@@ -40,11 +38,13 @@ function Songs({ songs = [], genres = [] }) {
         ))}
       </Tabs>
 
-      <Carousel
+      <Section
+        title="Songs"
         data={filteredSongs}
         type="song"
+        showToggle={false}
       />
-    </section>
+    </div>
   );
 }
 

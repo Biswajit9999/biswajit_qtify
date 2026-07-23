@@ -36,21 +36,11 @@ function App() {
 
       <Hero />
 
-      <Section
-        title="Top Albums"
-        data={topAlbums}
-      />
+      <Section title="Top Albums" data={topAlbums} />
 
-      <Section
-        title="New Albums"
-        data={newAlbums}
-        carousel
-      />
+      <Section title="New Albums" data={newAlbums} />
 
-      <Songs
-        songs={songs}
-        genres={genres}
-      />
+      <Songs songs={songs} genres={genres} />
     </>
   );
 }
