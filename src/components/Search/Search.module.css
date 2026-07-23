@@ -1,0 +1,71 @@
+.search {
+  width: 502px;
+  height: 100%;
+
+  padding: 14px 20px;
+
+  border: 1px solid var(--color-black);
+  border-radius: 8px 0 0 8px;
+
+  outline: none;
+
+  font-size: 16px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  height: 48px;
+}
+
+.searchButton {
+  width: 66px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 1px solid var(--color-black);
+  border-left: none;
+
+  border-radius: 0 8px 8px 0;
+
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background: #f5f5f5;
+}
+
+.listElement {
+  padding: 12px 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.listElement:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.albumTitle {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.albumArtists {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+@media (max-width: 768px) {
+  .search {
+    width: 250px;
+  }
+}

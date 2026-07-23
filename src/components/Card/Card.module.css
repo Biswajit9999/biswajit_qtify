@@ -1,0 +1,40 @@
+.card {
+  width: 159px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardContainer {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.image {
+  width: 100%;
+  height: 205px;
+  object-fit: cover;
+  display: block;
+}
+
+.footer {
+  padding: 8px;
+}
+
+.chip {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+}
+
+.title {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-white);
+  text-align: left;
+  line-height: 1.4;
+  word-break: break-word;
+}

@@ -1,0 +1,22 @@
+.navbar {
+  background-color: var(--color-primary);
+  height: 74px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 32px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 16px;
+    gap: 16px;
+  }
+}

@@ -1,0 +1,39 @@
+.section {
+  padding: 32px;
+}
+
+.heading {
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+:global(.MuiTabs-root) {
+  margin-bottom: 24px;
+}
+
+:global(.MuiTabs-indicator) {
+  background-color: var(--color-primary) !important;
+}
+
+:global(.MuiTab-root) {
+  color: var(--color-white) !important;
+  text-transform: none !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+:global(.Mui-selected) {
+  color: var(--color-primary) !important;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 24px 16px;
+  }
+
+  .heading {
+    font-size: 18px;
+  }
+}

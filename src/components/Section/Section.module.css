@@ -1,0 +1,50 @@
+.section {
+  padding: 32px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h2 {
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.toggle {
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.toggle:hover {
+  opacity: 0.8;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 24px 16px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+
+  .grid {
+    justify-content: center;
+  }
+}
