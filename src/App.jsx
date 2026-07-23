@@ -13,19 +13,19 @@ function App() {
   const [genres, setGenres] = useState([]);
 
   useEffect(() => {
-    fetch("https://qtify-backend-labs.crio.do/albums/top")
+    fetch("https://qtify-backend.labs.crio.do/albums/top")
       .then((res) => res.json())
       .then((data) => setTopAlbums(data));
 
-    fetch("https://qtify-backend-labs.crio.do/albums/new")
+    fetch("https://qtify-backend.labs.crio.do/albums/new")
       .then((res) => res.json())
       .then((data) => setNewAlbums(data));
 
-    fetch("https://qtify-backend-labs.crio.do/songs")
+    fetch("https://qtify-backend.labs.crio.do/songs")
       .then((res) => res.json())
       .then((data) => setSongs(data));
 
-    fetch("https://qtify-backend-labs.crio.do/genres")
+    fetch("https://qtify-backend.labs.crio.do/genres")
       .then((res) => res.json())
       .then((data) => setGenres(data.data));
   }, []);
